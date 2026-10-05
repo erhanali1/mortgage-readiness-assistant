@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mortgage Application Readiness Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <p class="eyebrow">Operations dashboard</p>
+        <h1>Mortgage Application Readiness</h1>
+        <p class="lede">
+          Track document completeness and recommended next steps. This tool does
+          not approve or deny a mortgage.
+        </p>
+      </div>
+      <p id="advisory" class="advisory"></p>
+    </header>
+
+    <section class="summary" aria-label="Application totals">
+      <article class="stat">
+        <p class="stat-label">Total applications</p>
+        <p id="total-count" class="stat-value">—</p>
+      </article>
+      <article class="stat ready">
+        <p class="stat-label">Ready</p>
+        <p id="ready-count" class="stat-value">—</p>
+      </article>
+      <article class="stat attention">
+        <p class="stat-label">Needs Attention</p>
+        <p id="attention-count" class="stat-value">—</p>
+      </article>
+      <article class="stat risk">
+        <p class="stat-label">At Risk</p>
+        <p id="risk-count" class="stat-value">—</p>
+      </article>
+    </section>
+
+    <section class="filters" aria-label="Filters">
+      <label>
+        Stage
+        <select id="stage-filter">
+          <option value="all">All stages</option>
+        </select>
+      </label>
+      <label>
+        Readiness status
+        <select id="status-filter">
+          <option value="all">All statuses</option>
+          <option value="Ready">Ready</option>
+          <option value="Needs Attention">Needs Attention</option>
+          <option value="At Risk">At Risk</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Application</th>
+            <th>Purpose / Type</th>
+            <th>Stage</th>
+            <th>Completion</th>
+            <th>Status</th>
+            <th>Missing requirements</th>
+            <th>Recommended next action</th>
+          </tr>
+        </thead>
+        <tbody id="app-rows"></tbody>
+      </table>
+      <p id="empty-state" class="empty hidden">No applications match these filters.</p>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

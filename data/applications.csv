@@ -1,0 +1,9 @@
+application_id,loan_purpose,loan_type,stage,income_verified,identity_verified,credit_authorized,purchase_contract,appraisal_complete,insurance_verified,disclosures_signed,days_in_stage,last_contact_days
+APP-1001,Purchase,Conventional,Processing,true,true,true,true,false,false,true,3,1
+APP-1002,Refinance,FHA,Underwriting,true,true,true,false,true,true,true,2,1
+APP-1003,Purchase,VA,Processing,false,true,true,true,false,false,true,8,6
+APP-1004,Purchase,Conventional,Closing,true,true,true,true,true,true,true,1,0
+APP-1005,Refinance,Conventional,Processing,true,false,true,false,false,false,false,6,5
+APP-1006,Purchase,FHA,Underwriting,true,true,true,true,false,true,true,4,2
+APP-1007,Refinance,VA,Closing,true,true,true,false,true,true,true,2,1
+APP-1008,Purchase,Conventional,Processing,false,false,true,false,false,false,false,10,8
